@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Detalhes de: {{ livro.titulo }}{% endblock %}
+
+{% block content %}
+    <h2>Detalhes do Livro: {{ livro.titulo }}</h2>
+    <p><strong>Título:</strong> {{ livro.titulo }}</p>
+    <p><strong>Autor:</strong> {{ livro.autor }}</p>
+    <p><strong>Ano de Publicação:</strong> {{ livro.ano_publicacao }}</p>
+    <p><strong>ISBN:</strong> {{ livro.isbn }}</p>
+    <p><strong>Gênero:</strong> {{ livro.genero }}</p>
+    
+    <p>
+        <a href="{% url 'editar_livro' livro.pk %}">Editar</a> | 
+        <a href="{% url 'excluir_livro' livro.pk %}">Excluir</a> |
+        <a href="{% url 'listar_livros' %}">Voltar para a lista</a>
+    </p>
+{% endblock %}

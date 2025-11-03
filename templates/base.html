@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Biblioteca{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>📖 Biblioteca Digital</h1>
+        <p><a href="{% url 'listar_livros' %}">Lista de Livros</a> | <a href="{% url 'criar_livro' %}">Adicionar Novo</a></p>
+        <hr>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>S
